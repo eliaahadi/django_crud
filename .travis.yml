@@ -1,0 +1,13 @@
+language: python # => 1
+    python: # => 2
+      - "3.5"
+    services: # => 3
+      - sqlite3
+    env: # => 4
+      -DJANGO=2.0 DB=sqlit3
+    install: # => 5
+      - bash shellscripts/
+    before_script: # => 6
+      - sqlite3 test.db
+    script: # => 7
+      - python3 manage.py test
