@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Book(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     pages = models.IntegerField()
 
