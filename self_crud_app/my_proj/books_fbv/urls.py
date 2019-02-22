@@ -10,4 +10,6 @@ urlpatterns = [
     path('new', views.book_create, name='book_new'),
     path('edit/<int:pk>', views.book_update, name='book_edit'),
     path('delete/<int:pk>', views.book_delete, name='book_delete'),
+    path('api/', views.book_json_list, name='book_json'),
+    path('api/<int:pk>', views.book_json_detail, name='book_json'),
 ]

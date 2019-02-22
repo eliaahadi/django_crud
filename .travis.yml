@@ -1,0 +1,18 @@
+language: python # => 1
+
+python: # => 2
+  - "2.7"
+  - "3.5"
+  - "3.6"
+services: # => 3
+  - sqlite3
+env: # => 4
+  - DJANGO=2.0 
+  - DB=sqlite3
+install: # => 5
+  - pip install -r requirements.txt
+  - bash shellscripts/setup_packages.sh
+before_script: # => 6
+  - sqlite3 test.db
+script: # => 7
+  - python3 manage.py test
