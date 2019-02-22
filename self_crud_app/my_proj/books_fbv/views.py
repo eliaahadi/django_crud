@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-from django.shortcuts import render, redirect, get_object_or_404
-=======
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
->>>>>>> d5c8e814f49d18272d0baa380ff610fe335e1541
 from django.forms import ModelForm
 from django.http import JsonResponse
 from books_fbv.models import Book
